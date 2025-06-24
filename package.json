@@ -1,3 +1,6 @@
+"homepage": "https://AdrianaCapozzi.github.io/capozzi-digital-vista",
+
+
 {
   "name": "vite_react_shadcn_ts",
   "private": true,
@@ -9,6 +12,8 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
+
+    
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
