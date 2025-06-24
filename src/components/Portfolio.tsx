@@ -183,19 +183,24 @@ function Portfolio() {
             </div>
 
             <div className={`flex justify-center ${isVisible ? 'animate-float' : 'opacity-0'}`}>
-              <div className="relative">
-                <div className="w-80 h-80 rounded-full gradient-red p-1 animate-glow">
-                  <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                    <div className="text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300"></div>
-                      <p className="text-sm">Sua foto aqui</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-100 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-200 rounded-full animate-pulse delay-1000"></div>
-              </div>
-            </div>
+  <div className="relative">
+    <div className="w-80 h-80 rounded-full gradient-red p-1 animate-glow">
+      <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+        <div className="text-center">
+          <img 
+            src="src/img/20250407_120900.jpg" 
+            alt="Minha foto" 
+            className="w-32 h-32 mx-auto mb-4 rounded-full object-cover"
+          />
+          <p className="text-sm">Sua foto aqui</p>
+        </div>
+      </div>
+    </div>
+    <div className="absolute -top-4 -right-4 w-20 h-20 bg-red-100 rounded-full animate-pulse"></div>
+    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-200 rounded-full animate-pulse delay-1000"></div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
