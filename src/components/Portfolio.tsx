@@ -192,7 +192,7 @@ function Portfolio() {
             alt="Minha foto" 
             className="w-32 h-32 mx-auto mb-4 rounded-full object-cover"
           />
-          <p className="text-sm">Sua foto aqui</p>
+          <p className="text-sm">Adriana</p>
         </div>
       </div>
     </div>
@@ -213,7 +213,7 @@ function Portfolio() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Graduanda em Engenharia de Computação com foco em análise de dados,
               desenvolvimento web, BI e QA. Experiência em soluções tecnológicas
-              e metodologias ágeis.
+              e metodologias ágeis. 
             </p>
           </div>
 
@@ -250,7 +250,9 @@ function Portfolio() {
                 <div className="space-y-2">
                   <h4 className="text-xl font-semibold">Univesp - Universidade Virtual do Estado de São Paulo</h4>
                   <p className="opacity-90">Bacharelado em Engenharia de Computação</p>
-                  <p className="opacity-80">Julho 2022 - Agosto 2027 (5º semestre)</p>
+                  <p className="opacity-80">Julho 2022 - Agosto 2027 (7º semestre)</p>
+                  <p className="opacity-90">Bacharelado em Tecnologia da Informação com ênfase em Desenvolvimento de Software e IoT</p>
+                  <p className="opacity-80">Julho 2022 - Agosto 2025 (Concluído)</p>
                 </div>
               </div>
               <div className="text-center">
