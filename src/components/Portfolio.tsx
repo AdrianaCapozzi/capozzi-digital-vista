@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Users, Target, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Users, Target, Award, Heart } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -66,6 +65,21 @@ const Portfolio = () => {
     }
   ];
 
+  const volunteerWork = {
+    organization: "Rede Solidária de Peruíbe",
+    role: "Comunicadora e orientadora em tecnologia",
+    period: "Janeiro 2019 - Janeiro 2024 · 5 anos 1 mês",
+    sector: "Direitos civis e ações sociais",
+    description: "Organização em uma rede de apoio a pequenos produtores na cidade de Peruíbe no enfrentamento à exclusão digital, auxílio ao uso das redes sociais para comercialização e troca de produtos. Campanha de doação de cestas de alimentos agroecológicos no período pandêmico, beneficiando produtores rurais do entorno que precisaram escoar a produção sem o acontecimento de feiras presenciais e pessoas em insegurança alimentar que foram afetadas financeiramente com a perda de suas funções geradoras de renda em conjunto com coletivos de Economia Solidária da Baixada Santista.",
+    activities: [
+      "Auxílio no enfrentamento à exclusão digital",
+      "Orientação sobre uso de redes sociais para comercialização",
+      "Organização de campanhas de doação de alimentos agroecológicos",
+      "Participação em seminários e lives do Sesc Santos e Registro"
+    ],
+    links: ["#", "#", "#"]
+  };
+
   const skills = {
     programming: ["Python", "Java", "JavaScript", "SQL"],
     tools: ["AWS", "Flask", "Git", "GitHub", "Power BI", "SAS"],
@@ -83,7 +97,7 @@ const Portfolio = () => {
               Adriana Capozzi
             </div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'experience', 'volunteer', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -96,6 +110,7 @@ const Portfolio = () => {
                   {section === 'home' ? 'Início' : 
                    section === 'about' ? 'Sobre' :
                    section === 'experience' ? 'Experiência' :
+                   section === 'volunteer' ? 'Voluntariado' :
                    section === 'projects' ? 'Projetos' : 'Contato'}
                 </button>
               ))}
@@ -276,6 +291,68 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer Work Section */}
+      <section id="volunteer" className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gradient mb-4">Trabalho Voluntário</h2>
+            <p className="text-xl text-gray-600">
+              Compromisso com impacto social e tecnologia para todos
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="md:col-span-1">
+                <div className="flex items-center mb-4">
+                  <Heart className="w-6 h-6 text-red-500 mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-800">{volunteerWork.organization}</h3>
+                </div>
+                <p className="text-red-500 font-semibold mb-2">{volunteerWork.role}</p>
+                <div className="space-y-1 text-sm text-gray-600 mb-4">
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {volunteerWork.period}
+                  </div>
+                  <div className="flex items-center">
+                    <Target className="w-4 h-4 mr-2" />
+                    {volunteerWork.sector}
+                  </div>
+                </div>
+              </div>
+              <div className="md:col-span-2">
+                <p className="text-gray-700 mb-6 leading-relaxed">{volunteerWork.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Principais Atividades:</h4>
+                  <ul className="space-y-2">
+                    {volunteerWork.activities.map((activity, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-700 text-sm">{activity}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex space-x-4">
+                  {volunteerWork.links.map((link, idx) => (
+                    <a
+                      key={idx}
+                      href={link}
+                      className="inline-flex items-center text-red-500 hover:text-red-600 font-semibold transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Link {idx + 1}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
