@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Calendar, Users, Target, Award, Heart } from 'lucide-react';
 
-const Portfolio = () => {
+function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -20,25 +20,42 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Portal da Zeladoria - Análise de Dados e CI",
-      period: "Fevereiro 2025 - Presente",
+      period: "Fevereiro 2025 - Junho 2025",
       description: "Desenvolvimento de solução web com foco em coleta, modelagem e visualização de dados para apoio à gestão pública. Implementação de CI/CD com GitHub Actions e criação de dashboards com Power BI.",
-      technologies: ["Python", "Flask", "Power BI", "GitHub Actions", "HTML/CSS/JS"],
-      videoLink: "#",
+      technologies: ["Python", "Flask", "MySQL", "GitHub Actions", "HTML/CSS/JS"],
+      videoLink: "https://youtu.be/M72Qb6XuZE0?si=2HpAdHD7_fWKguNj",
       highlights: [
         "Elaboração do relatório técnico com metodologia SCRUM",
         "Implementação de integração contínua",
         "Criação de base de dados para Power BI",
-        "Configuração de pipeline de desenvolvimento"
+        "Configuração de pipeline de desenvolvimento",
+        "Liderança na comunicação com stakeholders"
       ]
     },
+
+    {
+      title: "Conecta São Vicente - Portal da Zeladoria",
+      period: "Julho 2024 - Novembro 2024",
+      description: "Protótipo de um software web desenvolvido para o setor de agendamento de serviços de zeladoria urbana da prefeitura da cidade de São Vicente, em São Paulo , na disciplina Projeto Integrador II do Eixo de Computação da Universidade Virtual do Estado de São Paulo - UNIVESP. Responsável pela construção dos dashboards e plataforma para visualização dos dados para que seja possível a partir daí o setor da prefeitura tomar decisões condizentes às necessidades da população. Comunicação com a comunidade externa e confecção do plano de atividades utilizando SCRUM, contextualizando na dissertação do relatório.",
+      technologies: ["Python", "Flask", "Google Sheets", "HTML/CSS/JS"],
+      videoLink: "https://youtu.be/NVHUTLvehrw?si=ZfuGrl4bgor8IiHI",
+      highlights: [
+        "Elaboração do relatório técnico",
+        "SCRUM master",
+        "Criação de base de dados no Google Sheets",
+        "Desenvolvimento de gráficos com JS Charts",
+        "Liderança na comunicação com stakeholders"
+      ]
+    },
+
     {
       title: "Sistema ERP para Pequenos Agricultores",
       period: "Fevereiro - Maio 2024",
       description: "Desenvolvimento do front-end e auxílio na construção do banco de dados. Contribuição com documentação, pesquisa e mediação entre equipe e comunidade.",
-      technologies: ["JavaScript", "SQL", "Git", "GitHub"],
+      technologies: ["JavaScript", "SQLite", "Git", "GitHub"],
       videoLink: "#",
       highlights: [
-        "Desenvolvimento de interface moderna",
+        "Desenvolvimento de interface",
         "Gestão de banco de dados",
         "Documentação técnica completa",
         "Liderança na comunicação com stakeholders"
@@ -67,7 +84,7 @@ const Portfolio = () => {
 
   const volunteerWork = {
     organization: "Rede Solidária de Peruíbe",
-    role: "Comunicadora e orientadora em tecnologia",
+    role: "Comunicadora e Orientadora em Tecnologia",
     period: "Janeiro 2019 - Janeiro 2024 · 5 anos 1 mês",
     sector: "Direitos civis e ações sociais",
     description: "Organização em uma rede de apoio a pequenos produtores na cidade de Peruíbe no enfrentamento à exclusão digital, auxílio ao uso das redes sociais para comercialização e troca de produtos. Campanha de doação de cestas de alimentos agroecológicos no período pandêmico, beneficiando produtores rurais do entorno que precisaram escoar a produção sem o acontecimento de feiras presenciais e pessoas em insegurança alimentar que foram afetadas financeiramente com a perda de suas funções geradoras de renda em conjunto com coletivos de Economia Solidária da Baixada Santista.",
@@ -77,12 +94,12 @@ const Portfolio = () => {
       "Organização de campanhas de doação de alimentos agroecológicos",
       "Participação em seminários e lives do Sesc Santos e Registro"
     ],
-    links: ["#", "#", "#"]
+    links: ["https://www.youtube.com/watch?v=Eq1nXwpdoDw&ab_channel=AGROECOLOGIA%26ECONOMIASOLIDARIA", "https://www.youtube.com/watch?v=dRzbQ5TYu0M&ab_channel=SescRegistro", "https://www.youtube.com/watch?v=ojHEsKgAR_w&ab_channel=RedeSolid%C3%A1riadePeru%C3%ADbe"]
   };
 
   const skills = {
-    programming: ["Python", "Java", "JavaScript", "SQL"],
-    tools: ["AWS", "Flask", "Git", "GitHub", "Power BI", "SAS"],
+    programming: ["VBA", "JavaScript", "SQL"],
+    tools: ["Flask", "Git", "GitHub", "Power BI", "SAS"],
     systems: ["Linux", "MacOS", "Windows"],
     methodologies: ["Kanban", "Metodologias Ágeis", "SCRUM"]
   };
@@ -101,17 +118,15 @@ const Portfolio = () => {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`px-4 py-2 rounded-full transition-all duration-300 capitalize ${
-                    activeSection === section
+                  className={`px-4 py-2 rounded-full transition-all duration-300 capitalize ${activeSection === section
                       ? 'bg-red-500 text-white shadow-lg'
-                      : 'text-gray-700 hover:text-red-500 hover:bg-red-50'
-                  }`}
+                      : 'text-gray-700 hover:text-red-500 hover:bg-red-50'}`}
                 >
-                  {section === 'home' ? 'Início' : 
-                   section === 'about' ? 'Sobre' :
-                   section === 'experience' ? 'Experiência' :
-                   section === 'volunteer' ? 'Voluntariado' :
-                   section === 'projects' ? 'Projetos' : 'Contato'}
+                  {section === 'home' ? 'Início' :
+                    section === 'about' ? 'Sobre' :
+                      section === 'experience' ? 'Experiência' :
+                        section === 'volunteer' ? 'Voluntariado' :
+                          section === 'projects' ? 'Projetos' : 'Contato'}
                 </button>
               ))}
             </div>
@@ -131,24 +146,23 @@ const Portfolio = () => {
                   <span className="text-gray-800">Capozzi</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Engenheira de Computação em formação, especializada em análise de dados, 
-                  desenvolvimento web e Business Intelligence. Liderança afetuosa e certeira 
-                  com foco em soluções tecnológicas universais.
+                  Graduanda do 7º semestre em Engenheira de Computação pela UNIVESP, com interesse em análise de dados,
+                  Desenvolvimento Web e Business Intelligence. Foco em resolução de problemas de maneira multidisciplinar e colaborativa.
                 </p>
               </div>
-              
+
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-md">
                   <Target className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-700">Liderança Estratégica</span>
+                  <span className="text-gray-700">Estratégica e postura de liderança</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-md">
                   <Users className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-700">Colaboração</span>
+                  <span className="text-gray-700">Colaboração ativa em equipes</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white rounded-full px-4 py-2 shadow-md">
                   <Award className="w-5 h-5 text-red-500" />
-                  <span className="text-gray-700">Inovação</span>
+                  <span className="text-gray-700">Resolução de problemas de forma criativa e certeira</span>
                 </div>
               </div>
 
@@ -192,8 +206,8 @@ const Portfolio = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gradient mb-4">Sobre Mim</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Graduanda em Engenharia de Computação com foco em análise de dados, 
-              desenvolvimento web, BI e QA. Experiência em soluções tecnológicas 
+              Graduanda em Engenharia de Computação com foco em análise de dados,
+              desenvolvimento web, BI e QA. Experiência em soluções tecnológicas
               e metodologias ágeis.
             </p>
           </div>
@@ -207,8 +221,8 @@ const Portfolio = () => {
               >
                 <h3 className="text-xl font-semibold text-gray-800 mb-4 capitalize">
                   {category === 'programming' ? 'Programação' :
-                   category === 'tools' ? 'Ferramentas' :
-                   category === 'systems' ? 'Sistemas' : 'Metodologias'}
+                    category === 'tools' ? 'Ferramentas' :
+                      category === 'systems' ? 'Sistemas' : 'Metodologias'}
                 </h3>
                 <div className="space-y-2">
                   {skillList.map((skill) => (
@@ -326,7 +340,7 @@ const Portfolio = () => {
               </div>
               <div className="md:col-span-2">
                 <p className="text-gray-700 mb-6 leading-relaxed">{volunteerWork.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-800 mb-3">Principais Atividades:</h4>
                   <ul className="space-y-2">
@@ -427,7 +441,7 @@ const Portfolio = () => {
           <p className="text-xl mb-12 opacity-90">
             Pronta para novos desafios e oportunidades de crescimento
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="space-y-4">
               <Mail className="w-8 h-8 mx-auto" />
@@ -475,6 +489,6 @@ const Portfolio = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default Portfolio;
