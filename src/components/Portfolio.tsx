@@ -25,11 +25,12 @@ function Portfolio() {
       technologies: ["Python", "Flask", "MySQL", "GitHub Actions", "HTML/CSS/JS"],
       videoLink: "https://youtu.be/M72Qb6XuZE0?si=2HpAdHD7_fWKguNj",
       highlights: [
-        "Elaboração do relatório técnico com metodologia SCRUM",
-        "Implementação de integração contínua",
+        "Elaboração do relatório técnico"
+        "SCRUM master",
+        "Implementação de Integração Contínua",
         "Criação de base de dados para Power BI",
         "Configuração de pipeline de desenvolvimento",
-        "Liderança na comunicação com stakeholders"
+        "Liderança na comunicação com stakeholders - colegas de equipe e comunidade externa"
       ]
     },
 
@@ -44,21 +45,21 @@ function Portfolio() {
         "SCRUM master",
         "Criação de base de dados no Google Sheets",
         "Desenvolvimento da interface de gráficos com JS Charts",
-        "Liderança na comunicação com stakeholders"
+        "Liderança na comunicação com stakeholders - colegas de equipe e comunidade externa"
       ]
     },
 
     {
       title: "Sistema ERP de gerenciamento e comercialização para pequenos produtores rurais",
       period: "Fevereiro - Maio 2024",
-      description: "Desenvolvimento do front-end e auxílio na construção do banco de dados. Contribuição com documentação, pesquisa e mediação entre equipe e comunidade.",
+      a: "Desenvolvimento do front-end e auxílio na construção do banco de dados. Contribuição com documentação, pesquisa e mediação entre equipe e comunidade.",
       technologies: ["JavaScript", "SQLite", "Git", "GitHub"],
-      videoLink: "#",
+      videoLink: "https://youtu.be/cQEA7apmT9Q?si=R2wbCLHpPyVj8Loy",
       highlights: [
         "Desenvolvimento da interface e CRUD's",
         "Gestão do banco de dados",
         "Documentação técnica",
-        "Liderança na comunicação com stakeholders"
+        "Liderança na comunicação com stakeholders - colegas de equipe e comunidade externa"
       ]
     }
   ];
@@ -97,12 +98,13 @@ function Portfolio() {
     links: ["https://www.youtube.com/watch?v=Eq1nXwpdoDw&ab_channel=AGROECOLOGIA%26ECONOMIASOLIDARIA", "https://www.youtube.com/watch?v=dRzbQ5TYu0M&ab_channel=SescRegistro", "https://www.youtube.com/watch?v=ojHEsKgAR_w&ab_channel=RedeSolid%C3%A1riadePeru%C3%ADbe"]
   };
 
-  const skills = {
-    programming: ["VBA", "JavaScript", "SQL"],
-    tools: ["Flask", "Git", "GitHub", "Power BI", "SAS"],
-    systems: ["Linux", "MacOS", "Windows"],
-    preferred methodology: ["SCRUM"]
-  };
+const skills = {
+  programming: ["VBA", "JavaScript (ES6+)", "SQL"],
+  web: ["HTML5", "CSS3", "React"],
+  tools: ["Flask", "Git", "GitHub", "Power BI", "SAS"],
+  methodology: ["SCRUM"],
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
@@ -111,7 +113,7 @@ function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-xl font-bold text-gradient">
-              Adriana Capozzi
+              Meu Portfólio
             </div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'experience', 'volunteer', 'projects', 'contact'].map((section) => (
