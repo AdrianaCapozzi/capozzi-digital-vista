@@ -1,5 +1,3 @@
-
-
 O projeto faz uso de:
 
 - Vite

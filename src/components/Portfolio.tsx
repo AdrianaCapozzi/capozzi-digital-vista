@@ -36,28 +36,28 @@ function Portfolio() {
     {
       title: "Conecta São Vicente - Portal da Zeladoria",
       period: "Julho 2024 - Novembro 2024",
-      description: "Protótipo de um software web desenvolvido para o setor de agendamento de serviços de zeladoria urbana da prefeitura da cidade de São Vicente, em São Paulo , na disciplina Projeto Integrador II do Eixo de Computação da Universidade Virtual do Estado de São Paulo - UNIVESP. Responsável pela construção dos dashboards e plataforma para visualização dos dados para que seja possível a partir daí o setor da prefeitura tomar decisões condizentes às necessidades da população. Comunicação com a comunidade externa e confecção do plano de atividades utilizando SCRUM, contextualizando na dissertação do relatório.",
+      description: "Protótipo de um software web desenvolvido para o setor de agendamento de serviços de zeladoria urbana da prefeitura da cidade de São Vicente, em São Paulo , na disciplina Projeto Integrador II do Eixo de Computação da Universidade Virtual do Estado de São Paulo - UNIVESP. Responsável pela construção dos dashboards e plataforma para visualização dos dados para que fosse possível, a partir daí, o setor da prefeitura tomar decisões condizentes às necessidades da população. Comunicação com a comunidade externa e colegas de equipe para confecção do plano de atividades utilizando SCRUM, contextualizando na dissertação do relatório.",
       technologies: ["Python", "Flask", "Google Sheets", "HTML/CSS/JS"],
       videoLink: "https://youtu.be/NVHUTLvehrw?si=ZfuGrl4bgor8IiHI",
       highlights: [
         "Elaboração do relatório técnico",
         "SCRUM master",
         "Criação de base de dados no Google Sheets",
-        "Desenvolvimento de gráficos com JS Charts",
+        "Desenvolvimento da interface de gráficos com JS Charts",
         "Liderança na comunicação com stakeholders"
       ]
     },
 
     {
-      title: "Sistema ERP para Pequenos Agricultores",
+      title: "Sistema ERP de gerenciamento e comercialização para pequenos produtores rurais",
       period: "Fevereiro - Maio 2024",
       description: "Desenvolvimento do front-end e auxílio na construção do banco de dados. Contribuição com documentação, pesquisa e mediação entre equipe e comunidade.",
       technologies: ["JavaScript", "SQLite", "Git", "GitHub"],
       videoLink: "#",
       highlights: [
-        "Desenvolvimento de interface",
-        "Gestão de banco de dados",
-        "Documentação técnica completa",
+        "Desenvolvimento da interface e CRUD's",
+        "Gestão do banco de dados",
+        "Documentação técnica",
         "Liderança na comunicação com stakeholders"
       ]
     }
@@ -69,7 +69,7 @@ function Portfolio() {
       role: "Estagiária - Gestão Comercial e Analytics",
       period: "Março 2025 - Presente",
       location: "Barueri, São Paulo - Híbrido",
-      description: "Apoio na execução de rotinas e processos da área, atualização de relatórios mensais, auxílio na documentação e geração de leads comerciais.",
+      description: "Apoio na execução de rotinas e processos da área, atualização de relatórios semanais, auxílio na documentação e geração de leads.",
       technologies: ["SQL", "Microsoft SQL Server", "Excel", "Power BI", "SAS"]
     },
     {
@@ -101,7 +101,7 @@ function Portfolio() {
     programming: ["VBA", "JavaScript", "SQL"],
     tools: ["Flask", "Git", "GitHub", "Power BI", "SAS"],
     systems: ["Linux", "MacOS", "Windows"],
-    methodologies: ["Kanban", "Metodologias Ágeis", "SCRUM"]
+    preferred methodology: ["SCRUM"]
   };
 
   return (
