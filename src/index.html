@@ -1,30 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adriana Capozzi - Portfólio Digital</title>
-    <meta name="description" content="Portfólio digital de Adriana Capozzi - Bacharela em Tecnologia da informação com Ênfase em Desenvolvimento de Software e IoT  e Graduanda em Engenharia de Computação com interesse em análise de dados, Desenvolvimento Web e Business Intelligence" />
+
+    <meta name="description" content="Portfólio digital de Adriana Capozzi - Bacharela em Tecnologia da Informação com Ênfase em Desenvolvimento de Software e IoT, Graduanda em Engenharia de Computação e Pós-graduanda em Administração de Banco de Dados." />
     <meta name="author" content="Adriana Capozzi" />
 
+    <!-- SEO Social -->
     <meta property="og:title" content="Adriana Capozzi - Portfólio Digital" />
-    <meta property="og:description" content="Bacharela em Tecnologia da Informação com Ênfase em Desenvolvimento de Software e IoT  e Graduanda em Engenharia de Computação com interesse em Análise de Dados, Desenvolvimento Web e Business Intelligence" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:description" content="Portfólio de Adriana Capozzi com foco em Engenharia de Dados, Desenvolvimento Web e Business Intelligence." />
+    <meta property="og:type" content="website" 
+    <meta property="og:image" content="/assets/preview.png" /> <!-- Substitua por sua imagem -->
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
+    <meta name="twitter:site" content="@adrianacapozzi" />
+    <meta name="twitter:image" content="/assets/preview.png" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root" class="theme-default"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Script para troca de temas
+      function setTheme(theme) {
+        document.documentElement.className = `theme-${theme}`;
+      }
+    </script>
   </body>
 </html>
